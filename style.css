@@ -115,7 +115,7 @@ h1:first-letter {
     position: relative;
     padding: 8px 15px;
     margin-left: 40px;
-    background: #def3ff;
+    background: #ffe9a7;
     border-radius: 20px;
   }
   
@@ -127,7 +127,7 @@ h1:first-letter {
     font-size: 15px;
     left: -40px;
     bottom: 0;
-    color: #def3ff;
+    color: #ffe9a7	;
   }
   
   h4:after {
@@ -138,5 +138,5 @@ h1:first-letter {
     font-size: 23px;
     left: -23px;
     bottom: 0;
-    color: #def3ff;
+    color: #ffe9a7	;
   }
