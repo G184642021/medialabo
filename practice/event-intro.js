@@ -5,6 +5,8 @@ let b1 = document.querySelector('button#blue');
 b1.addEventListener('click', changeH1ColorRed);
 
 //// 以下，練習5-2 でコードを追加
+let b = document.querySelector('button#random');
+b.addEventListener('click',changeBackgroundColorRandom);
 
 
 ////////////////////////////////////////////////////////
