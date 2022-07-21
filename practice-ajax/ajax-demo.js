@@ -32,6 +32,8 @@ function showResult(resp) {
 
 	// data.x を出力
 	console.log(data.x);
+
+	console.log(data.results.shop[0].access);
 }
 
 // 通信エラーが発生した時の処理
