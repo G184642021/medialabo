@@ -75,7 +75,9 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
-  
+  body{
+    color:white !important;
+  }
   @keyframes scale-down {
     from { transform: scale(1.02); }
     to { transform: scale(1); }

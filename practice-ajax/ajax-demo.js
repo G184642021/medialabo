@@ -1,14 +1,14 @@
-let b = document.querySelector('#sendRequest');
-b.addEventListener('click', sendRequest);
+// let b = document.querySelector('#sendRequest');
+// b.addEventListener('click', sendRequest);
 
 
 // 通信を開始する処理
 function sendRequest() {
-	service =;
-	genre =;
+
+	genre = document.querySelector('input#a');
 	// URL を設定
 	//let url = 'https://www.nishita-lab.org/web-contents/jsons/test.json';
-	let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/{genre}.json'
+	let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/' +genre.value + '.json';
 
 	// 通信開始
 	axios.get(url)
