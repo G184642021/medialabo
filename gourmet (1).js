@@ -1,5 +1,3 @@
-
-
 let data = {
   "results": {
     "api_version": "1.26",
@@ -260,9 +258,3 @@ function showError(err) {
 function finish() {
  console.log('Ajax 通信が終わりました');
 }
-
-
-// for (let n of data.results.shop) {
-//   console.log(n.name+" : "+n.name_kana);
-// }
-
