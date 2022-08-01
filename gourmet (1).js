@@ -1,3 +1,5 @@
+
+
 let data = {
   "results": {
     "api_version": "1.26",
@@ -197,10 +199,70 @@ let data = {
       }
     ]
   }
-}
+};
 
 /////////// 課題3-2 ここからプログラムを書こう
-for (let n of data.results.shop) {
-  console.log(n.name+" : "+n.name_kana);
+
+
+let b = document.querySelector('#sendRequest');
+b.addEventListener('click', sendRequest);
+
+let z =0;
+// 通信を開始する処理
+function sendRequest() {
+  for(let i =0;i<z;i++){
+  let element = document.querySelector('p');
+  element.remove();
 }
+z=0;
+ // URL を設定
+  let e = document.querySelector('input[name="number"]');
+  let key =e.value;
+ let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/'+key+'.json';
+
+ // 通信開始
+ axios.get(url)
+  .then(showResult)
+  .catch(showError)
+  .then(finish);
+}
+let ta = document.querySelector('table');
+
+// 通信が成功した時の処理
+function showResult(resp) {
+ // サーバから送られてきたデータを出力
+ let data = resp.data;
+
+ // data が文字列型なら，オブジェクトに変換する
+ if (typeof data === 'string') {
+  data = JSON.parse(data);
+ }
+
+ // data をコンソールに出力
+ console.log(data);
+
+ // data.x を出力
+  for(let n of data.results.shop){
+    console.log(n.name);
+    let p = document.createElement('p');
+    p.textContent = n.name;
+    ta.insertAdjacentElement('afterend', p);
+    z++;
+  }
+}
+
+// 通信エラーが発生した時の処理
+function showError(err) {
+ console.log(err);
+} 
+
+// 通信の最後にいつも実行する処理
+function finish() {
+ console.log('Ajax 通信が終わりました');
+}
+
+
+// for (let n of data.results.shop) {
+//   console.log(n.name+" : "+n.name_kana);
+// }
 
