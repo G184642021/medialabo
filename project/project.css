@@ -1,0 +1,151 @@
+
+h1:first-letter {
+  font-size: 2em;
+  color: black;
+}
+.bg_pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffe9a7;
+  opacity: 0.4;
+  z-index: -1;
+}
+.Cross {
+  background: radial-gradient(circle, transparent 20%, #ffe9a7 20%, #ffe9a7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffe9a7 20%, #ffe9a7 80%, transparent 80%, transparent) 50px 50px, linear-gradient(#ffc107 4px, transparent 4px) 0 -2px, linear-gradient(90deg, #ffc107 4px, #ffe9a7 4px) -2px 0;
+background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
+
+/*ここから下 リンクの書式等*/
+.btn-square-slant {
+  display: inline-block;
+  position: relative;
+  padding: 0.5em 1.4em;
+  text-decoration: none;
+  background: #FFCC66;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 5px #FF9900;/*ボタン色より暗めに*/
+  border-right: solid 5px #FF9900;/*ボタン色より暗めに*/
+}
+
+.btn-square-slant:before {  
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: -1px;
+  width: 0;
+  height: 0;
+  border-width: 0 6px 6px 0px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #FFF;
+}
+
+.btn-square-slant:after {  
+  content: " ";
+  position: absolute;
+  top: -1px;
+  right: -5px;
+  width: 0;
+  height: 0;
+  border-width: 0px 6px 6px 0px;
+  border-style: solid;
+  border-color: #FFF;
+  border-bottom-color: transparent;
+}
+
+.btn-square-slant:active {
+  /*ボタンを押したとき*/
+  border:none;
+  -webkit-transform: translate(6px,6px);
+  transform: translate(6px,6px);
+}
+
+.btn-square-slant:active:after, .btn-square-slant:active:before {
+  content: none;/*ボタンを押すと線が消える*/
+}
+
+
+
+
+h2 {
+  position: relative;
+  padding: 5px 26px 5px 42px;
+  background: #fff0d9;
+  font-size: 20px;
+  color:#000000;
+  margin-left: -33px;
+  line-height: 1.3;
+  border-bottom: solid 3px orange;
+  z-index:-2;
+}
+
+h2:before {
+  position: absolute;
+  content: '';
+  left: -2px;
+  top: -2px;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 40px white;
+  border-bottom: solid 79px transparent;
+  z-index: -1;
+}
+
+h2:after {
+  position: absolute;
+  content: '';
+  right: -3px;
+  top: -7px;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 40px transparent;
+  border-bottom: solid 79px white;
+  z-index: -1;
+}
+
+
+
+
+h4 {
+  position: relative;
+  padding: 8px 15px;
+  margin-left: 40px;
+  background: #ffe9a7;
+  border-radius: 20px;
+}
+
+h4:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  font-weight: 900;
+  position: absolute;
+  font-size: 15px;
+  left: -40px;
+  bottom: 0;
+  color: #ffe9a7	;
+}
+
+h4:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  font-weight: 900;
+  position: absolute;
+  font-size: 23px;
+  left: -23px;
+  bottom: 0;
+  color: #ffe9a7	;
+}
+body{
+  background-color: green;
+}
+header{
+  background-color: purple;
+}
+footer{
+  background-color: red;
+}

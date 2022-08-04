@@ -11,8 +11,8 @@
   </head>
   <body>
     <p>検索したいキーワードをas入力してください。</p>
-    <input type="search" name="search" placeholder="キーワードを入力" id = "a">
-    <input type="submit" name="submit" value="検索" onclick="sendRequest()">
+    <input type="search" name="search" placeholder="キーワードを入力" id = "food">
+    <input type="submit" id = "sendRequest"name="sendRequest" value="検索" onclick="sendRequest()">
     <table border="1">
       <p>G001 ... 居酒屋</p>
       <p>G002 ... ダイニングバー・バル</p>
@@ -34,19 +34,19 @@
       <p>G015 ... その他グルメ</p>
         <tr>
           <th>項目名</th>
-          <th>項目説明</th>
+          <th id = "koumoku">項目説明</th>
         </tr>
         <tr>
           <td>access</td>
-          <td>アクセス情報</td>
+          <td id = "access">アクセス情報</td>
         </tr>
         <tr>
           <td>address</td>
-          <td>住所</td>
+          <td id = "address">住所</td>
         </tr>
         <tr>
             <td>catch</td>
-            <td>キャッチコピー</td>
+            <td id = "catchcopy">キャッチコピー</td>
         </tr>
       </table>
 
